@@ -1,30 +1,36 @@
 <template>
-  <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
+  <div id="nav" class="nav">
+    <router-link class="nav-link" to="/">
+      <i class="bi bi-house-fill" style="text-align: center"></i>
+    </router-link>
+    <router-link class="nav-link" to="/manajemen"
+      ><i class="bi bi-file-earmark-bar-graph-fill"></i>
+    </router-link>
+    <router-link class="nav-link" to="/pelanggan"
+      ><i class="bi bi-person-lines-fill"></i
+    ></router-link>
+    <router-link class="nav-link" to="/settings"
+      ><i class="bi bi-gear-fill"></i
+    ></router-link>
   </div>
   <router-view />
 </template>
-
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-
 #nav {
-  padding: 30px;
+  /* background: #0099ff; */
+  background: #40a6ff;
+  justify-content: center;
 }
-
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
+.nav-link {
+  color: white;
+  padding: 1rem 2rem;
 }
-
-#nav a.router-link-exact-active {
-  color: #42b983;
+@media (max-width: 575.98px) {
+  #nav {
+    position: fixed;
+    bottom: 0%;
+    left: 0%;
+    right: 0%;
+  }
 }
 </style>

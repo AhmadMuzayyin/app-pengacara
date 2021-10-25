@@ -1,5 +1,9 @@
-import { createRouter, createWebHashHistory } from "vue-router";
+import { createRouter, createWebHistory } from "vue-router";
 import Home from "../views/Home.vue";
+import Manajemen from "../views/Manajemen.vue";
+import Pelanggan from "../views/Klien.vue";
+import Settings from "../views/Settings.vue";
+import Add_Manajemen from "../views/Manajemen/Tambah.vue";
 
 const routes = [
   {
@@ -8,19 +12,29 @@ const routes = [
     component: Home,
   },
   {
-    path: "/about",
-    name: "About",
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: function () {
-      return import(/* webpackChunkName: "about" */ "../views/About.vue");
-    },
+    path: "/manajemen",
+    name: "Manajemen",
+    component: Manajemen,
+  },
+  {
+    path: "/pelanggan",
+    name: "Pelanggan",
+    component: Pelanggan,
+  },
+  {
+    path: "/settings",
+    name: "Settings",
+    component: Settings,
+  },
+  {
+    path: "/manajemen/add",
+    name: "Add_Manajemen",
+    component: Add_Manajemen,
   },
 ];
 
 const router = createRouter({
-  history: createWebHashHistory(),
+  history: createWebHistory(),
   routes,
 });
 
